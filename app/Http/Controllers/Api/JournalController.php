@@ -31,6 +31,12 @@ class JournalController extends Controller
     public function store(Request $request)
     {
         //
+        $journal = Journal::create([
+            'entry' => $request->entry,
+            'emotion' => $request->emotion
+        ]);
+        $journal->save();
+        return response()->json($journal, 200);
     }
 
     /**
@@ -55,6 +61,14 @@ class JournalController extends Controller
     public function update(Request $request, string $id)
     {
         //
+        $journal = Journal::find($id);
+        
+        $journal->update([
+            'entry' => $request->entry,
+            'emotion' => $request->emotion
+        ]);
+        $journal->save();
+        return response()->json($journal, 200);
     }
 
     /**
@@ -63,5 +77,7 @@ class JournalController extends Controller
     public function destroy(string $id)
     {
         //
+        $journal = Journal::find($id);
+        $journal->delete();
     }
 }
