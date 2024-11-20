@@ -46,6 +46,8 @@ class JournalController extends Controller
     public function show(string $id)
     {
         //
+        $journal = Journal::find();
+        return response()->json($journal, 200);
     }
 
     /**
