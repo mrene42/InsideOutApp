@@ -6,6 +6,7 @@
             <div class="card-body">
                 <h5 class="card-title"> {{$journal->created_at}} </h5>
                 <p class="card-text"> {{$journal->entry}} </p>
+                <a href="{{ route('showDetail', ['id' => $journal->id]) }}" class="btn btn-info">Show</a>
             </div>
         </div>
     @endforeach

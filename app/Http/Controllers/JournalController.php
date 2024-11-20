@@ -40,7 +40,8 @@ class JournalController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $journal = Journal::find($id);
+        return view('show', compact('journal'));
     }
 
     /**

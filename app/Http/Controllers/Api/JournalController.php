@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Journal;
 
 class JournalController extends Controller
 {
@@ -45,6 +46,8 @@ class JournalController extends Controller
     public function show(string $id)
     {
         //
+        $journal = Journal::find($id);
+        return response()->json($journal, 200);
     }
 
     /**
