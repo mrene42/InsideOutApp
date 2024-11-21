@@ -6,7 +6,7 @@ function arrayEmotionsImages(element){
     const emotion = {
         "sadness":{
             "img":"/img/characters/Sadness.png",
-            "color":"#A7ABF2"
+            "color":"#9CD7E6"
         },
         "joy":{
             "img":"/img/characters/Joy.png",
@@ -14,7 +14,7 @@ function arrayEmotionsImages(element){
         },
         "fear":{
             "img":"/img/characters/Fear.png",
-            "color":"#9CD7E6"
+            "color":"#A7ABF2"
         },
         "envy":{
             "img":"/img/characters/Envy.png",
@@ -38,7 +38,7 @@ function arrayEmotionsImages(element){
         },
         "anger":{
             "img":"/img/characters/Anger.png",
-            "color":"#8C0303"
+            "color":"#F50752"
         },
 
     }
@@ -71,5 +71,24 @@ function displayEmotionsImages(){
     }
 
 }
+function displayEmotionsShow(){
+    
+    let element = document.querySelectorAll("#cardShow");
+    
+
+    for (let i =0; i<element.length; i++){
+        
+        let characterArray = arrayEmotionsImages(element[i].firstElementChild.alt);
+
+        let url = characterArray.img;
+        element[i].firstElementChild.src = url;
+
+    }
+
+}
+
+
 
 displayEmotionsImages();
+
+displayEmotionsShow();
