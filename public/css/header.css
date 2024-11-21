@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Delius&family=Dosis:wght@200..800&display=swap');
+
 
 header{
     display: flex;
@@ -7,6 +7,7 @@ header{
     gap: 10vh;
     background-color: #E4E3DF;
     padding: 1rem;
+    flex-wrap: wrap;
 }
 header img{
     width: 15rem;
