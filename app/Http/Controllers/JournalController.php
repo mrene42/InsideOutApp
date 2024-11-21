@@ -15,7 +15,11 @@ class JournalController extends Controller
     {
         //
         $journals = Journal::all();
-        //var_dump($journals);
+        foreach($journals as $journal){
+            $entry = substr($journal->entry, 0, 80);
+            $journal->entry = $entry;
+
+        }
         return view('home', compact('journals'));
     }
 
