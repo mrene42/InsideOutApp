@@ -29,4 +29,20 @@ class Journaltest extends TestCase
         $response->assertStatus(200)
             ->assertViewIs('home');
     }
+
+
+    public function test_CheckIfCanShowEntryinJournalWithApi(){
+        $this->withoutExceptionHandling();
+
+        $journal = Journal::factory()->create([
+            'entry' => 'Este es un ejemplo',
+            'emotion' => 'joy',
+        ]);
+
+        $response = $this->get('/journals/' . $journal->id);
+
+        $response->assertStatus(200)
+            ->assertViewIs('show')
+            ->assertViewHas('journal', $journal);
+    }
 }
