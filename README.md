@@ -1,66 +1,159 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Soulscript
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Welcome to the Emotion Journal
 
-## About Laravel
+[screenshot web]
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Our project is about an emotion journaling company called “Soulscript” which is designed to help users record, express and reflect on their daily emotions and is visualized in the form of cards with characters from “InsideOut” to distinguish the emotion expressed such as; joy, sadness, anxiety, boredom, fear, anger, etc.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+>[!CAUTION]
+>Please read all the points of the README in order to make good use of the project. Thank you. 
 
-## Learning Laravel
+## Installation Requirements
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+In order to run this project locally, you need:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+1. XAMPP (or any other local server that supports PHP and MySQL)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+2. A modern web browser
 
-## Laravel Sponsors
+3. VSC Terminal
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+4. Composer
 
-### Premium Partners
+5. Node.js
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+6. xdebug
 
-## Contributing
+## Installation
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+1. Install my project with git clone
 
-## Code of Conduct
+```bash
+  git clone https://github.com/angiehelensanchez/InsideOutApp.git
+```
+2. Install composer:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```
+composer install
+``` 
 
-## Security Vulnerabilities
+3. Install NPM:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```
+npm install
+``` 
+4. Create an .env by taking the example .env.example file and modify:
 
-## License
+- DB_CONNECTION=mysql
+- DB_DATABASE=soul_script
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+5. Create a database in MySQL
+-  In the database manager “phpMyAdmin” create only the database with name “soul_script”.
+- Generate the tables and the data of the tables:
+
+```
+php artisan migrate:fresh --seed
+```
+
+6. Run NPM
+
+```
+npm run dev
+```
+
+7. Run in another Laravel terminal:
+
+```
+php artisan serve
+```
+ 
+## Guide
+
+In this quick guide you will learn about the main functionalities of our project "Soulscript":
+
+1. On the main page you have information about the list of the diary of emotions
+
+[Screenshot page]
+[description] (puedes crear, editar, eliminar,etc..)
+- Each card is a journal with a description of the emotion expressed with its respective InsideOut character and includes its date of registration.
+
+- On each card there is a “Show” button that displays the selected journal in full screen on another page.
+
+2. If you want to add a new diary, edit or delete you can do it from postman.
+
+[Screenshot page]
+[descrition]
+
+### EndPoints
+```
+npm run dev
+```
+
+```
+php artisan serve
+```
+From postman you can read, create, edit or delete a journal:
+
+1. If you want to read all journals, you can do it with `GET`
+[http://127.0.0.1:8000/api/]
+
+2. If you want to read one specific journal, you can do it with `GET`
+[http://127.0.0.1:8000/api/journals/{id}]
+
+2. If you want to add a new journal, you can do it with `POST`.
+[http://127.0.0.1:8000/api/journals]
+
+3. If you want to edit an journal, you can do it  you can do it with `UPDATE`.
+[http://127.0.0.1:8000/api/journals/{id}]
+
+4. If you want to delete a journal, you can do it  you can do it with `DELETE`.
+[http://127.0.0.1:8000/api/journals/{id}]
+
+
+##  Execution of the tests
+You can test our functions using ` php artisan test --coverage` in the terminal.
+```
+php artisan test
+```
+##  Diagrams made (BBDD)
+
+## Project structure
+
+The project follows the structure of the MVC design pattern, which allows for better separation of responsibilities and makes code maintenance easier.
+
+- **Model:** Manages the application logic and connects to the database to interact with incident data.
+
+- **View:** It is responsible for representing the data to the user, using HTML and CSS.
+
+- **Controller:** Handles communication between the model and the view, processing user requests and sending appropriate responses.
+
+### Tech
+The project is developed using the following technologies:
+
+<a href='#777BB4' target="_blank"><img alt='PHP' src='https://img.shields.io/badge/PHP-100000?style=for-the-badge&logo=PHP&logoColor=FFFFFF&labelColor=8892be&color=8892be'/></a>
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='HTML5' src='https://img.shields.io/badge/HTML5-100000?style=for-the-badge&logo=HTML5&logoColor=white&labelColor=E34F26&color=E34F26'/></a>
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='CSS3' src='https://img.shields.io/badge/CSS3-100000?style=for-the-badge&logo=CSS3&logoColor=white&labelColor=1572B6&color=1572B6'/></a>
+<a href='#4479A1' target="_blank"><img alt='MySQL' src='https://img.shields.io/badge/MySQL-100000?style=for-the-badge&logo=MySQL&logoColor=white&labelColor=00758f&color=00758f'/></a>
+
+### Tools
+
+The tools used for this project are:
+
+- Visual Studio Code
+- Git bash
+- GitHub
+- Composer
+- Node.js
+
+## Autor
+
+- [@Angie](https://github.com/angiehelensanchez)
+- [@Ariana](https://github.com/ArianaMartinMartinez)
+- [@Jaz](https://github.com/Jaz356)
+- [@Alberto](https://github.com/TOKIO-V2)
+- [@René](https://github.com/mrene42)
+
+>[!NOTE]
+>Our team is learning.
