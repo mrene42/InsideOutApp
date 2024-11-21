@@ -1,0 +1,38 @@
+#cardShow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#cardShow img{
+    width: 50vh;
+    transition: transform 1.5s ease;
+}
+
+#cardShow img:hover{
+    transform: scale(1.2);
+}
+
+#cardShow h4{
+    font-family: "Delius", cursive;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 4vh;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+#cardShow p{
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3vh;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+#cardShow a{
+    min-width: 15%;
+    min-height: 5%;
+    font-size: 3vh;
+}
