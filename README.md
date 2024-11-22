@@ -170,3 +170,4 @@ The tools used for this project are:
 - [@Jaz](https://github.com/Jaz356)
 - [@Alberto](https://github.com/TOKIO-V2)
 - [@René](https://github.com/mrene42)
+# My-Journal
