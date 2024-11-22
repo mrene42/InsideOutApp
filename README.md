@@ -2,7 +2,8 @@
 
 **Welcome to the Emotion Journal!**
 
-![388673449-7d1ec5f3-fc8f-446b-97ec-23615606318b](https://github.com/user-attachments/assets/53ba47d4-0ed1-44ef-966a-c9b99bf42eb8)
+![Inside Out Home](https://github.com/user-attachments/assets/8f106f8b-0e8e-49b5-b159-f8e54797f4d7)
+
 
 ## Description
 Our project is about an emotion journaling company called “Soulscript” which is designed to help users record, express and reflect on their daily emotions and is visualized in the form of cards with characters from “InsideOut” to distinguish the emotion expressed such as; joy, sadness, anxiety, boredom, fear, anger, etc.
@@ -52,7 +53,8 @@ In order to run this project locally, you need:
 
 5. Create a database in MySQL
    
-![388659692-17067927-16e0-4015-894b-62638dc0ef64](https://github.com/user-attachments/assets/0e9e351c-2a19-4774-a0c7-127e66bd0dd5)
+![MySQL](https://github.com/user-attachments/assets/3f85ce39-df35-4a88-a063-1a96dfa29fcf)
+
 
 - In the database manager “phpMyAdmin” create only the database with name “soul_script”.
   
@@ -61,9 +63,7 @@ In order to run this project locally, you need:
 ```
   php artisan migrate:fresh --seed
 ```
-<div>
-    <img src="https://github.com/user-attachments/assets/45fbed84-cabf-4251-ad0f-922c17c4a029" width="60%"/>
-</div>
+![myAdmin](https://github.com/user-attachments/assets/ba429905-b762-4a2e-a436-7417c0bb4b87)
 
 6. Run NPM
 
@@ -82,10 +82,8 @@ In order to run this project locally, you need:
 In this quick guide you will learn about the main functionalities of our project "Soulscript":
 
 1. On the main page you have information about the list of the diary of emotions
-    <figure > 
-        <img src="https://github.com/user-attachments/assets/53ba47d4-0ed1-44ef-966a-c9b99bf42eb8" width="47%" align="center"/>
-        <img src="https://github.com/user-attachments/assets/43ad9c4d-11a0-4d99-af48-0b0509c8d23f" width="50%" align="center"/>
-    </figure>
+   ![Inside Out Home](https://github.com/user-attachments/assets/242c927d-1e59-4bd3-9fb1-47792f6c4deb)
+   ![Inside Out Show](https://github.com/user-attachments/assets/8803f16f-ee2a-4db8-8d11-a292523e50d0)
 
     - Each card is a journal with a description of the emotion expressed with its respective InsideOut character and includes its date of registration.
 
@@ -93,9 +91,8 @@ In this quick guide you will learn about the main functionalities of our project
 
 
 2. If you want to add a new diary, edit or delete you can do it from postman.
-    <div>
-        <img src="https://github.com/user-attachments/assets/203907ef-5bc3-45da-b907-c59edfb427c7" width="50%"/>  
-    </div>
+    ![Postman](https://github.com/user-attachments/assets/05edbd32-4aa7-49f9-9dcc-718b11643df6)
+
 
 ## EndPoints
 ```
@@ -122,15 +119,15 @@ From postman you can read, create, edit or delete a journal:
 >[!IMPORTANT]
 >You can test our functions using ` php artisan test --coverage` in the terminal.
 
-<div>
-    <img src="https://github.com/user-attachments/assets/00daa36d-fed8-40c0-a04b-bac26448a1ac" width="70%"/>  
-</div>
+![Tests](https://github.com/user-attachments/assets/40326d24-4b0e-4f4e-b62a-9ecc0e41daf4)
+
 
 ##  Diagrams made (BBDD)
 
 This is our unique database structure for the tables.
 
-<img src="https://github.com/user-attachments/assets/4baa3329-bdc1-4893-83a2-f76274ea737b" width="20%"/>  
+![database structure](https://github.com/user-attachments/assets/99973889-612c-432b-88eb-5c971aff1638)
+
 
 ## Project structure
 
