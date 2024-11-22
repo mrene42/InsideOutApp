@@ -15,25 +15,29 @@ class JournalController extends Controller
     {
         //
         $journals = Journal::all();
-        //var_dump($journals);
+        foreach($journals as $journal){
+            $entry = substr($journal->entry, 0, 80);
+            $journal->entry = $entry;
+
+        }
         return view('home', compact('journals'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    /* public function create()
     {
         //
-    }
+    } */
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    /* public function store(Request $request)
     {
         //
-    }
+    } */
 
     /**
      * Display the specified resource.
@@ -47,24 +51,24 @@ class JournalController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    /* public function edit(string $id)
     {
         //
     }
-
+ */
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+   /*  public function update(Request $request, string $id)
     {
         //
-    }
+    } */
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+   /*  public function destroy(string $id)
     {
         //
-    }
+    } */
 }
